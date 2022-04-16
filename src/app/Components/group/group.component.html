@@ -1,0 +1,31 @@
+<div class="m-3">
+    <input #groupName type="text" name="create" id="create" class="p-1 m-1">
+    <button class="btn btn-primary m-1" (click)="createGroup(groupName.value)">Create Group</button>
+    <button class="btn btn-danger m-1" (click)="deleteGroup()">Delete all Group</button>
+    <table id="groups">
+        <tr>
+            <th>Group Name</th>
+            <th>Number of persons</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Edit</th>
+        </tr>
+        <tr *ngFor="let group of groupList let i = index">
+            <td>
+                {{group.name}}
+            </td>
+            <td>
+                {{group.persons.length}}
+            </td>
+            <td>
+                {{group.dateCreated | date:'M/d/yy, h:mm a'}}
+            </td>
+            <td>
+                {{group.dateUpdated | date:'M/d/yy, h:mm a'}}
+            </td>
+            <td class="text-center">
+                <button class="btn btn-dark">Edit</button>
+            </td>
+        </tr>
+    </table>
+</div>
