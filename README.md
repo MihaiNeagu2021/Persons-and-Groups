@@ -4,9 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Details 
 The project meets the requirements:
+
 Create/edit people
+
 Create/edit groups
+
 Move people from one group to another
+
 For the last task to move one group to another group, the functionality is not complete, there are a few more corner cases to cover. I decided to send the implementation in this form to fit in time.
 
 All the data is stored in local storage
